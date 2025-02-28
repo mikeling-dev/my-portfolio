@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 w-full bg-gray-900 text-white p-4 shadow-md">
+    <nav className="fixed top-0 w-full  text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold">
-          Mike Ling Dev
+          mike_ling
         </Link>
         <div className="space-x-4">
           <Link href="#about" className="hover:text-gray-300">
