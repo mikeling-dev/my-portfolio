@@ -81,11 +81,16 @@ export default function Hero() {
 
     // 7. Handle Window Resize
     const handleResize = () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+
+      camera.aspect = width / height;
       camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(width, height);
     };
+
     window.addEventListener("resize", handleResize);
+    handleResize(); // Initial size setup
 
     // 8. Cleanup on Unmount
     return () => {
@@ -96,22 +101,26 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-screen bg-black text-white overflow-hidden w-screen">
+    <section
+      id="home"
+      className="relative w-full h-screen overflow-hidden px-6 md:px-20"
+    >
       {/* Three.js Canvas */}
-      <canvas ref={canvasRef} className="absolute inset-0" />
+      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
 
       {/* Text in Bottom-Left */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="absolute bottom-40 left-20 z-10"
+        className="absolute bottom-24 md:bottom-40 z-10"
       >
         <h1 className="text-4xl md:text-5xl font-bold mb-2">
           Hi, I&apos;m Mike
         </h1>
         <p className="text-lg md:text-xl">
-          A passionate self-taught developer exploring the space
+          A self-taught developer passionate about creating intuitive, efficient
+          solutions that make technology more accessible and valuable to users.
         </p>
       </motion.div>
     </section>
