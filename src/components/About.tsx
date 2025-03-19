@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-slate-600">
-      <div className="container mx-auto px-6 md:px-20">
+    <section id="about" className="py-16 bg-slate-600">
+      <div className="container mx-auto px-6 md:px-20 flex flex-col">
         <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -15,24 +15,22 @@ export default function About() {
           About Me
         </motion.h2>
 
-        <div className="flex flex-col md:flex-row gap-10">
-          {/* Left Column - Existing Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="md:w-1/2"
-          >
-            <p className="text-lg">
-              With a blend of self-taught programming expertise and formal
-              education in actuarial science, I bring a unique analytical
-              perspective to software development. My journey combines technical
-              prowess with exceptional customer service skills, allowing me to
-              build solutions that truly address user needs.
-            </p>
-          </motion.div>
-
-          {/* Right Column - Skills */}
+        {/* Left Column - Existing Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="md:w-full mb-8"
+        >
+          <p className="text-lg">
+            With a blend of self-taught programming expertise and formal
+            education in actuarial science, I bring a unique analytical
+            perspective to software development. My journey combines technical
+            prowess with exceptional customer service skills, allowing me to
+            build solutions that truly address user needs.
+          </p>
+        </motion.div>
+        <div className="md:flex md:flex-row gap-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +63,7 @@ export default function About() {
               <ul className="space-y-2">
                 <li>• Comprehensive documentation creation</li>
                 <li>• In-depth product research and analysis</li>
-                <li>• Advanced troubleshooting methodologies</li>
+                <li>• Troubleshooting methodologies</li>
                 <li>• Customer support excellence</li>
                 <li>• UI/UX Design</li>
                 <li>• Creative graphic design</li>
@@ -74,6 +72,7 @@ export default function About() {
           </motion.div>
         </div>
       </div>
+      {/* </div> */}
     </section>
   );
 }
