@@ -42,13 +42,12 @@ export default function About() {
                 Technical Expertise
               </h3>
               <ul className="space-y-2">
-                <li>
-                  • Frontend: React, Redux, TypeScript, NextJS, TailwindCSS
-                </li>
+                <li>• Frontend: React, TypeScript, NextJS, TailwindCSS</li>
                 <li>• Core: HTML, CSS, JavaScript</li>
                 <li>• Testing & Deployment: Jest, Git, NodeJS</li>
-                <li>• AI utilisation: Model Context Protocol</li>
+                <li>• State Management: Redux, React Query</li>
                 <li>• Prototyping & Wireframing</li>
+                <li>• Version control: Git, Github</li>
               </ul>
             </div>
           </motion.div>
