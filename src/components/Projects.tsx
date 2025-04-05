@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import backkeeper_home from "../../public/backkeeper_home.png";
+import backkeeper_v1 from "../../public/backkeeper_home.png";
 import hl_calculator from "../../public/hl_calculator.png";
 import kinjo_home from "../../public/kinjo_home.png";
+import backkeeper_v2 from "../../public/backkeeper-v2-home.png";
 // import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
@@ -12,11 +13,11 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Backkeeper AI",
+      title: "Backkeeper AI v2",
       description:
-        "An AI-powered bookkeeping assistant designed to automate bookkeeping process",
+        "An AI-powered expense claims assistant designed to automate the claims process",
       overview:
-        "BackKeeper is an AI-powered bookkeeping assistant that simplifies financial record-keeping for non-accountants. It automates organizing and categorizing financial documents, making bookkeeping effortless. The system integrates with existing workflows - just forward receipts to a dedicated email or Telegram bot. The AI extracts relevant information and automatically records transactions. Users can interact conversationally with the Telegram bot to modify records or generate reports without logging into the dashboard. This approach eliminates the typical learning curve of bookkeeping software, allowing anyone to maintain organized financial records with minimal effort.",
+        "Backkeeper v2 is an AI-powered claims assistant that simplifies expense tracking and management for non-finance professionals. It automates organizing and categorizing expense documents, making the claims process effortless. The system integrates with existing workflows - just forward receipts to a dedicated Telegram bot. The AI extracts relevant information and automatically records transactions. Users can converse with the bot to modify records or export data without logging in. The new team feature allows organizations to create multiple teams, invite members, and centralize expense management. Admins can monitor all transactions, manage team members, and maintain complete oversight, allowing organizations to maintain organized financial records with minimal effort.",
       techstack: {
         frontend: [
           "Next.js",
@@ -26,19 +27,48 @@ export default function Projects() {
           "Shadcn/UI",
           "Framer motion",
         ],
-        backend: ["Next.js API Routes", "Prisma ORM", "Google Oauth 2.0"],
+        backend: ["Next.js API Routes", "PostgreSQL", "Tanstack React Query"],
       },
       keyFeatures: [
-        "Intelligent Document Processing: Automated receipt and invoice recognition with accurate data extraction from various document formats. Multi-currency support and automatic conversion",
-        "Seamless Integration: Email forwarding integration for instant processing. Telegram bot for on-the-go bookkeeping. No manual data entry required",
-        "Smart Categorization: Automatic transaction categorization with custom category creation and management. Learning capabilities that adapt to habit",
-        "Reporting & Analytics: On-demand financial reports via chat. Visual dashboards for financial insights. Customizable report templates (WIP)",
+        "Intelligent Document Processing: Automated receipt and invoice recognition with accurate data extraction from various document formats.",
+        "Seamless Integration: Telegram integration for instant processing. Conversational interface for managing claims without manual data entry.",
+        "Smart Categorization: Automatic transaction categorization with custom category creation and management.",
+        "Team Management: Create multiple teams, invite members, and maintain admin controls for organizational expense oversight.",
+        "Conversational Interface: Chat with our Telegram bot to modify records, export data, and manage expenses without logging into the dashboard.",
+        "Reporting & Analytics: Visual dashboards for financial insights. Customizable report templates (WIP)",
       ],
-      link: "https://backkeeper.com",
-      image_src: backkeeper_home,
+      link: "https://backkeeper-ui.vercel.app",
+      image_src: backkeeper_v2,
     },
     {
       id: 2,
+      title: "Backkeeper AI v1",
+      description:
+        "An AI-powered bookkeeping assistant designed to automate bookkeeping process",
+      overview:
+        "BackKeeper is an AI-powered bookkeeping assistant that simplifies financial record-keeping for non-accountants. It automates organizing and categorizing financial documents, making bookkeeping effortless. The system integrates with existing workflows - just forward receipts to a dedicated email. The AI extracts relevant information and automatically records transactions. User can download their expenses into a csv file for record keeping, or simply add their accountant to the team to help manage their expenses, allowing anyone to maintain organized financial records with minimal effort.",
+      techstack: {
+        frontend: [
+          "Next.js",
+          "React",
+          "Typescript",
+          "Tailwind CSS",
+          "Shadcn/UI",
+          "Framer motion",
+        ],
+        backend: ["Next.js API Routes", "Prisma ORM"],
+      },
+      keyFeatures: [
+        "Intelligent Document Processing: Automated receipt and invoice recognition with accurate data extraction from various document formats.",
+        "Seamless Integration: Email forwarding integration for instant processing. No manual data entry required",
+        "Smart Categorization: Automatic transaction categorization with custom category creation and management.",
+        "Reporting & Analytics: Visual dashboards for financial insights. Customizable report templates (WIP)",
+      ],
+      link: "https://backkeeper.com",
+      image_src: backkeeper_v1,
+    },
+    {
+      id: 3,
       title: "HL Trading Calculator",
       description:
         "An optimised, all-in-one trading calcultor developed for Hyperliquid dashboard. Collab with @chrisling_dev",
@@ -63,7 +93,7 @@ export default function Projects() {
       image_src: hl_calculator,
     },
     {
-      id: 3,
+      id: 4,
       title: "Kinjo",
       description:
         "An Airbnb-style booking platform, built from scratch with Next.js and Supabase.",
@@ -107,7 +137,7 @@ export default function Projects() {
       <div className="container mx-auto">
         <div className="">
           <h2 className="text-4xl font-bold mb-6 text-center">Projects</h2>
-          <div className="flex overflow-x-auto gap-4 pb-4 scrollbar-hide justify-center">
+          <div className="flex overflow-x-auto gap-4 pb-4 scrollbar-hide justify-start w-full">
             {projects.map((project) => (
               <button
                 key={project.id}
