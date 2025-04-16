@@ -5,6 +5,7 @@ import backkeeper_v1 from "../../public/backkeeper_home.png";
 import hl_calculator from "../../public/hl_calculator.png";
 import kinjo_home from "../../public/kinjo_home.png";
 import backkeeper_v2 from "../../public/backkeeper-v2-home.png";
+import vibewedding_home from "../../public/vibewedding-home.png";
 // import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
@@ -13,6 +14,43 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
+      title: "Vibe Wedding",
+      description:
+        "AI-powered wedding planner designed designed for couples from any religion or cultural background",
+      overview:
+        "Vibe Wedding is an innovative AI-powered platform that simplifies wedding planning for busy couples, inspired by my own engagement experience. Built in just 7 days using Cursor’s AI-assisted coding features, it generates personalized wedding plans based on user inputs like budget, date, and cultural preferences. Key features include collaborative planning with partners, customizable to-do lists, and tiered subscriptions for flexible usage. The project leverages Next.js for a responsive frontend and backend, with PostgreSQL and Supabase for data management. OpenAI’s API powers the intelligent plan generation, while Stripe handles payments. Future enhancements include a vendor marketplace with machine learning to recommend services tailored to each couple’s vision. The rapid development and deployment on Vercel showcase my ability to deliver complex, user-focused applications efficiently.",
+      techstack: {
+        frontend: [
+          "Next.js",
+          "React",
+          "Typescript",
+          "Tailwind CSS",
+          "Shadcn/UI",
+        ],
+        backend: [
+          "Next.js - API Routes",
+          "PostgreSQL - Database",
+          "Supabase - Host database",
+          "Prisma ORM - DB communication",
+          "Redux - State management",
+          "OpenAI API - Generate wedding plan",
+          "Stripe - Payment",
+          "Docker - Database Image",
+          "Vercel - Deployment",
+        ],
+      },
+      keyFeatures: [
+        "AI-Generated Wedding Plans: Utilizes OpenAI’s GPT-4o and GPT-4o-mini to create personalized wedding plans based on inputs like budget, location, theme, and cultural background, ensuring tailored and culturally sensitive recommendations.",
+        "Partner Collaboration Feature: Allows users to invite their partner to co-edit wedding plans in real-time, fostering seamless teamwork and shared decision-making, a unique feature not commonly found in other wedding planners.",
+        "Tiered Subscription Model: Offers a free tier with up to 3 plan generations and a premium tier with 10, enabling users to choose based on needs, with usage limits optimized for cost efficiency and scalability.",
+        "Interactive and Customizable To-Do List: Provides an AI-generated to-do list that users can modify, reorder, or expand, enhancing flexibility and user control over the planning process.",
+        "Rapid Development with Cursor: Built from setup to deployment in 7 days using Cursor’s AI-assisted coding, demonstrating efficient project execution and proficiency in leveraging AI tools for development.",
+      ],
+      link: "https://vibe-wedding.com",
+      image_src: vibewedding_home,
+    },
+    {
+      id: 2,
       title: "Backkeeper AI v2",
       description:
         "An AI-powered expense claims assistant designed to automate the claims process",
@@ -41,7 +79,7 @@ export default function Projects() {
       image_src: backkeeper_v2,
     },
     {
-      id: 2,
+      id: 3,
       title: "Backkeeper AI v1",
       description:
         "An AI-powered bookkeeping assistant designed to automate bookkeeping process",
@@ -68,7 +106,7 @@ export default function Projects() {
       image_src: backkeeper_v1,
     },
     {
-      id: 3,
+      id: 4,
       title: "HL Trading Calculator",
       description:
         "An optimised, all-in-one trading calcultor developed for Hyperliquid dashboard. Collab with @chrisling_dev",
@@ -93,7 +131,7 @@ export default function Projects() {
       image_src: hl_calculator,
     },
     {
-      id: 4,
+      id: 5,
       title: "Kinjo",
       description:
         "An Airbnb-style booking platform, built from scratch with Next.js and Supabase.",
