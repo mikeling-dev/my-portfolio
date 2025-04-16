@@ -229,7 +229,7 @@ export default function Projects() {
             <p className="mb-6">{selectedProject.overview}</p>
 
             <h4 className="text-xl font-semibold mb-2">Tech Stack</h4>
-            <div className="grid grid-cols-2 md:grid-cols-2 gap-4 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <div>
                 <strong>Frontend:</strong>
                 <ul className="list-disc pl-5">
