@@ -113,7 +113,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="absolute bottom-24 md:bottom-40 z-10"
+        className="absolute bottom-40 z-10"
       >
         <h1 className="text-4xl md:text-5xl font-bold mb-2">
           Hi, I&apos;m Mike
