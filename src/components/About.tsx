@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function About() {
   return (
     <section id="about" className="py-16 bg-slate-600">
-      <div className="container mx-auto px-6 md:px-20 flex flex-col">
+      <div className="mx-auto px-4 md:px-20 flex flex-col">
         <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -42,11 +42,14 @@ export default function About() {
                 Technical Expertise
               </h3>
               <ul className="space-y-2">
-                <li>• Frontend: React, TypeScript, NextJS, TailwindCSS</li>
+                <li>
+                  • Frontend: React, TypeScript, NextJS, TailwindCSS, Shadcn UI
+                </li>
+                <li>• Backend: Next.js, Prisma ORM, PostgreSQL, Restful API</li>
                 <li>• Core: HTML, CSS, JavaScript</li>
-                <li>• Testing & Deployment: Jest, Git, NodeJS</li>
+                <li>• Testing & Deployment: Jest, NodeJS, Vercel</li>
                 <li>• State Management: Redux, React Query</li>
-                <li>• Prototyping & Wireframing</li>
+                <li>• Prototyping & Wireframing: Figma</li>
                 <li>• Version control: Git, Github</li>
               </ul>
             </div>
@@ -65,7 +68,8 @@ export default function About() {
                 <li>• Troubleshooting methodologies</li>
                 <li>• Customer support excellence</li>
                 <li>• UI/UX Design</li>
-                <li>• Creative graphic design</li>
+                <li>• Product development creativity</li>
+                <li>• Utilise AI to automate workflow</li>
               </ul>
             </div>
           </motion.div>
